@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 1 - Advanced JavaScript Programming</title>
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <script>
+            function student(name, address, phone, course) {
+                this.name = name;
+                this.address = address;
+                this.phone = phone;
+                this.course = course;
+
+                this.getName = function() {
+                    return this.name + " ";
+                }
+
+                this.getInfo = function() {
+                    return "Name: " + this.name + "\n" + "Address: " + this.address + "\n" + "Phone: " + this.phone + "\n" + "Course: " + this.course + "\n" }
+
+                }
+            
+            let student1 = new student("Lily", "3752 Summit Street", "563-585-9397", "Biology");
+             
+            let student1Name = student1.getName();
+            let student1Info = student1.getInfo();
+
+            console.log(student1Name);
+            console.log(student1Info);
+        
+            let student2 = new student("Dan", "3953 Thomas Street", "847-514-1563", "Math");
+             
+            let student2Name = student2.getName();
+            let student2Info = student2.getInfo();
+
+            console.log(student2Name);
+            console.log(student2Info);
+        
+            let student3 = new student("Jenny", "2274 Bel Meadow Drive", "909-383-9826", "Psychology");
+        
+            let student3Name = student3.getName();
+            let student3Info = student3.getInfo();
+
+            console.log(student3Name);
+            console.log(student3Info);
+        
+        </script>
+           
+    </body>
+</html>
